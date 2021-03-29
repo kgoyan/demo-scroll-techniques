@@ -7,13 +7,25 @@ p {
     margin-bottom: 1.5rem;
 }
 
+h3 {
+    color: #fff;
+    font-size: 4rem;
+}
+
 
 .horizontal-content {
     display: flex;
     align-items: center;
     overflow: scroll;
+    /* this hides the scrollbar in firefox */
     scrollbar-width: none;
     height: 237.7px;
+}
+
+/* this hides the scrollbar in chrome */
+.horizontal-content::-webkit-scrollbar {
+    background: transparent;
+    width: 0;
 }
 
 .horizontal-content > div {
@@ -28,4 +40,15 @@ p {
 .horizontal-content > div:hover{
     flex: 0 0 346.5px;
     height: 205.7px;
+}
+
+.parallax-image {
+    background-image: url('../img/movie.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+    padding: 50px 20px;
+ /* note: background attachement gets disabled on mobile due to performance   */
 }
